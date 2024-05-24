@@ -1,4 +1,4 @@
-#include<iostream>
+п»ї#include<iostream>
 using namespace std;
 
 void FillRand(int arr[], const int n);
@@ -12,7 +12,7 @@ void main()
 	FillRand(arr, n);
 	Print(arr, n);
 
-	//1) Вичисляем размеры для четного и нечётных элементов:
+	//1) Р’РёС‡РёСЃР»СЏРµРј СЂР°Р·РјРµСЂС‹ РґР»СЏ С‡РµС‚РЅРѕРіРѕ Рё РЅРµС‡С‘С‚РЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ:
 	int even_count = 0;
 	int odd_count = 0;
 	for (int i = 0; i < n; i++)
@@ -20,14 +20,14 @@ void main()
 		if (arr[i] % 2 == 0)even_count++;
 		else odd_count++;
 	}
-	cout << "Количество чётных элементов: " << even_count << endl; //numbe of even
-	cout << "Количество нечётных элементов: " << odd_count << endl;//number of odd elements
+	cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ С‡С‘С‚РЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ: " << even_count << endl; //numbe of even
+	cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ РЅРµС‡С‘С‚РЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ: " << odd_count << endl;//number of odd elements
 
-	//2)Выделяем память для мссивов:
+	//2)Р’С‹РґРµР»СЏРµРј РїР°РјСЏС‚СЊ РґР»СЏ РјСЃСЃРёРІРѕРІ:
 	int* even_arr = new int[even_count];
 	int* odd_arr = new int[odd_count];
 
-	//3) Выносим значения из исходного массива в соответствующие:
+	//3) Р’С‹РЅРѕСЃРёРј Р·РЅР°С‡РµРЅРёСЏ РёР· РёСЃС…РѕРґРЅРѕРіРѕ РјР°СЃСЃРёРІР° РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёРµ:
 	for (int i = 0, j = 0, k = 0; i < n; i++)
 	{
 		//if (arr[i] % 2 == 0)even_arr[j++] = arr[i];  else odd_arr[k++] = arr[i];
@@ -36,11 +36,11 @@ void main()
 	}		
 		
 
-	//4) Выводим результаты на экран:
+	//4) Р’С‹РІРѕРґРёРј СЂРµР·СѓР»СЊС‚Р°С‚С‹ РЅР° СЌРєСЂР°РЅ:
 	Print(even_arr, even_count);
 	Print(odd_arr, odd_count);
 
-	//5)!!!   УДАЛЯЕМ МАССИВЫ !!!!!
+	//5)!!!   РЈР”РђР›РЇР•Рњ РњРђРЎРЎРР’Р« !!!!!
 	delete[] odd_arr;
 	delete[] even_arr;
 		 
